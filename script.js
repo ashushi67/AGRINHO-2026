@@ -1,18 +1,16 @@
 /**
- * Agrinho 2026 - Script Principal
+ * Agrinho 2026 - CEP - Script Principal
  * Desenvolvido por Uriel Henrique
+ * Colégio Estadual do Paraná
  * 
- * Arquitetura: Módulo único (Namespace) para evitar poluição do escopo global.
- * Funcionalidades: Acessibilidade, Observers de Scroll, Menu Mobile, Interatividade.
+ * Funcionalidades: Acessibilidade, Scroll, Menu Mobile, Animações
  */
 
 'use strict';
 
 const AgrinhoApp = (function() {
     
-    // ==========================================================================
-    // 1. CONFIGURAÇÃO E ESTADO
-    // ==========================================================================
+    // Configurações
     const config = {
         selectors: {
             header: '#main-header',
@@ -21,10 +19,7 @@ const AgrinhoApp = (function() {
             backToTop: '#back-to-top',
             accessibilityToggle: '#accessibility-toggle',
             accessibilityPanel: '#accessibility-panel',
-            closePanelBtn: '#close-panel',
-            balanceSlider: '#balance-slider',
-            equilibriumText: '#equilibrium-text',
-            faqItems: '.faq-item'
+            closePanelBtn: '#close-panel'
         },
         classes: {
             scrolled: 'scrolled',
@@ -34,10 +29,10 @@ const AgrinhoApp = (function() {
             largeSpacing: 'large-spacing'
         },
         storageKeys: {
-            fontSize: 'agrinho_font_size',
-            contrast: 'agrinho_contrast',
-            spacing: 'agrinho_spacing',
-            motion: 'agrinho_motion'
+            fontSize: 'agrinho_cep_font_size',
+            contrast: 'agrinho_cep_contrast',
+            spacing: 'agrinho_cep_spacing',
+            motion: 'agrinho_cep_motion'
         },
         limits: {
             minFontSize: 80,
@@ -46,6 +41,7 @@ const AgrinhoApp = (function() {
         }
     };
 
+    // Estado da aplicação
     let state = {
         fontSize: 100,
         isHighContrast: false,
@@ -53,9 +49,7 @@ const AgrinhoApp = (function() {
         isReduceMotion: false
     };
 
-    // ==========================================================================
-    // 2. GERENCIADOR DE ACESSIBILIDADE
-    // ==========================================================================
+    // Gerenciador de Acessibilidade
     const AccessibilityManager = {
         init() {
             this.loadPreferences();
@@ -75,15 +69,18 @@ const AgrinhoApp = (function() {
                 if (savedSpacing) state.isLargeSpacing = savedSpacing === 'true';
                 if (savedMotion) state.isReduceMotion = savedMotion === 'true';
             } catch (e) {
-                console.warn('LocalStorage não disponível. Preferências não serão salvas.', e);
+                console.warn('LocalStorage não disponível', e);
             }
         },
 
         applyPreferences() {
             document.documentElement.style.setProperty('--tamanho-fonte-base', `${state.fontSize}%`);
             
-            if (state.isHighContrast) document.body.classList.add(config.classes.highContrast);
-            else document.body.classList.remove(config.classes.highContrast);
+            if (state.isHighContrast) {
+                document.body.classList.add(config.classes.highContrast);
+            } else {
+                document.body.classList.remove(config.classes.highContrast);
+            }
 
             if (state.isLargeSpacing) {
                 document.documentElement.style.setProperty('--espacamento-linha', '2.0');
@@ -93,8 +90,11 @@ const AgrinhoApp = (function() {
                 document.documentElement.style.setProperty('--espacamento-letras', 'normal');
             }
 
-            if (state.isReduceMotion) document.body.classList.add(config.classes.reduceMotion);
-            else document.body.classList.remove(config.classes.reduceMotion);
+            if (state.isReduceMotion) {
+                document.body.classList.add(config.classes.reduceMotion);
+            } else {
+                document.body.classList.remove(config.classes.reduceMotion);
+            }
 
             this.updateAriaLabels();
         },
@@ -106,7 +106,7 @@ const AgrinhoApp = (function() {
                 localStorage.setItem(config.storageKeys.spacing, state.isLargeSpacing);
                 localStorage.setItem(config.storageKeys.motion, state.isReduceMotion);
             } catch (e) {
-                console.warn('Erro ao salvar preferências.', e);
+                console.warn('Erro ao salvar preferências', e);
             }
         },
 
@@ -163,7 +163,7 @@ const AgrinhoApp = (function() {
             try {
                 Object.values(config.storageKeys).forEach(key => localStorage.removeItem(key));
             } catch (e) {
-                console.warn('Erro ao limpar localStorage.', e);
+                console.warn('Erro ao limpar localStorage', e);
             }
             this.applyPreferences();
         },
@@ -178,13 +178,11 @@ const AgrinhoApp = (function() {
         }
     };
 
-    // ==========================================================================
-    // 3. GERENCIADOR DE UI (Header, Menu, Scroll)
-    // ==========================================================================
+    // Gerenciador de UI
     const UIManager = {
         init() {
             this.bindEvents();
-            this.handleScroll(); // Checagem inicial
+            this.handleScroll();
         },
 
         handleScroll() {
@@ -192,14 +190,12 @@ const AgrinhoApp = (function() {
             const backToTop = document.querySelector(config.selectors.backToTop);
             const scrollY = window.scrollY;
 
-            // Header glassmorphism
             if (scrollY > 50) {
                 header.classList.add(config.classes.scrolled);
             } else {
                 header.classList.remove(config.classes.scrolled);
             }
 
-            // Back to top button visibility
             if (scrollY > 500) {
                 backToTop.hidden = false;
             } else {
@@ -214,8 +210,6 @@ const AgrinhoApp = (function() {
 
             btn.setAttribute('aria-expanded', !isExpanded);
             nav.classList.toggle(config.classes.active);
-            
-            // Trap focus logic could be added here for full WCAG compliance
             document.body.style.overflow = !isExpanded ? 'hidden' : '';
         },
 
@@ -224,7 +218,6 @@ const AgrinhoApp = (function() {
             panel.classList.toggle(config.classes.active);
             AccessibilityManager.updateAriaLabels();
             
-            // Focus management
             if (panel.classList.contains(config.classes.active)) {
                 document.getElementById('close-panel').focus();
             }
@@ -245,7 +238,6 @@ const AgrinhoApp = (function() {
         },
 
         bindEvents() {
-            // Scroll listener with debounce for performance
             let scrollTimeout;
             window.addEventListener('scroll', () => {
                 if (scrollTimeout) return;
@@ -255,10 +247,8 @@ const AgrinhoApp = (function() {
                 }, 100);
             }, { passive: true });
 
-            // Mobile menu
             document.querySelector(config.selectors.mobileMenuBtn).addEventListener('click', () => this.toggleMobileMenu());
             
-            // Close mobile menu when clicking a link
             document.querySelectorAll('.nav-menu a').forEach(link => {
                 link.addEventListener('click', () => {
                     if (window.innerWidth <= 768) {
@@ -267,11 +257,9 @@ const AgrinhoApp = (function() {
                 });
             });
 
-            // Accessibility panel
             document.querySelector(config.selectors.accessibilityToggle).addEventListener('click', () => this.toggleAccessibilityPanel());
             document.querySelector(config.selectors.closePanelBtn).addEventListener('click', () => this.closeAccessibilityPanel());
             
-            // Close panel on outside click
             document.addEventListener('click', (e) => {
                 const panel = document.querySelector(config.selectors.accessibilityPanel);
                 const toggle = document.querySelector(config.selectors.accessibilityToggle);
@@ -282,10 +270,8 @@ const AgrinhoApp = (function() {
                 }
             });
 
-            // Back to top
             document.querySelector(config.selectors.backToTop).addEventListener('click', () => this.scrollToTop());
 
-            // Keyboard navigation for panel
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     const panel = document.querySelector(config.selectors.accessibilityPanel);
@@ -301,16 +287,12 @@ const AgrinhoApp = (function() {
         }
     };
 
-    // ==========================================================================
-    // 4. OBSERVER DE ANIMAÇÕES (Intersection Observer)
-    // ==========================================================================
+    // Gerenciador de Animações
     const AnimationManager = {
         init() {
-            // Verifica se o usuário prefere movimento reduzido
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches || state.isReduceMotion;
             
             if (prefersReducedMotion) {
-                // Se preferir, mostra tudo imediatamente
                 document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => {
                     el.style.opacity = '1';
                     el.style.transform = 'none';
@@ -333,7 +315,6 @@ const AgrinhoApp = (function() {
                 });
             }, observerOptions);
 
-            // Pausa animações inicialmente para serem disparadas pelo observer
             document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => {
                 el.style.animationPlayState = 'paused';
                 observer.observe(el);
@@ -341,70 +322,16 @@ const AgrinhoApp = (function() {
         }
     };
 
-    // ==========================================================================
-    // 5. SEÇÃO INTERATIVA: EQUILÍBRIO
-    // ==========================================================================
-    const EquilibriumManager = {
-        init() {
-            const slider = document.querySelector(config.selectors.balanceSlider);
-            const display = document.querySelector(config.selectors.equilibriumText);
-            
-            if (!slider || !display) return;
-
-            const scenarios = [
-                {
-                    threshold: 30,
-                    title: "Risco Ambiental",
-                    text: "Quando a produção é priorizada sem controle, o esgotamento do solo, a escassez hídrica e a perda de biodiversidade ameaçam a própria capacidade de produzir no futuro."
-                },
-                {
-                    threshold: 70,
-                    title: "Equilíbrio Ideal",
-                    text: "Quando produção e preservação caminham juntas, garantimos alimentos hoje sem comprometer os recursos de amanhã. Esta é a base do desenvolvimento sustentável."
-                },
-                {
-                    threshold: 100,
-                    title: "Subutilização",
-                    text: "Preservar é essencial, mas a produção agrícola é vital para a segurança alimentar global. O desafio é produzir mais, usando menos recursos e menos espaço."
-                }
-            ];
-
-            const updateDisplay = () => {
-                const value = parseInt(slider.value, 10);
-                slider.setAttribute('aria-valuenow', value);
-                
-                let scenario = scenarios[1]; // Default (equilíbrio)
-                
-                if (value <= 30) scenario = scenarios[0];
-                else if (value >= 70) scenario = scenarios[2];
-
-                // Atualiza com transição suave
-                display.style.opacity = '0.5';
-                setTimeout(() => {
-                    display.querySelector('h3').textContent = scenario.title;
-                    display.querySelector('p').textContent = scenario.text;
-                    display.style.opacity = '1';
-                }, 150);
-            };
-
-            slider.addEventListener('input', updateDisplay);
-            
-            // Inicializa
-            updateDisplay();
-        }
-    };
-
-    // ==========================================================================
-    // 6. INICIALIZAÇÃO
-    // ==========================================================================
+    // Inicialização
     const init = function() {
         document.addEventListener('DOMContentLoaded', () => {
             AccessibilityManager.init();
             UIManager.init();
             AnimationManager.init();
-            EquilibriumManager.init();
             
-            console.log('Agrinho 2026 App inicializado com sucesso. Desenvolvido por Uriel Henrique.');
+            console.log('Agrinho 2026 - CEP initialized');
+            console.log('Desenvolvido por Uriel Henrique');
+            console.log('Colégio Estadual do Paraná');
         });
     };
 
