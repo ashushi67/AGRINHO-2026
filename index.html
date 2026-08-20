@@ -6,54 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- SEO e Metadados -->
-    <title>Agrinho 2026 | Agro Forte, Futuro Sustentável</title>
-    <meta name="description" content="Agrinho 2026: Agro forte, futuro sustentável. Um projeto educacional sobre o equilíbrio entre produção agrícola e preservação do meio ambiente.">
-    <meta name="keywords" content="Agrinho 2026, agro sustentável, educação no campo, tecnologia agrícola, meio ambiente">
-    <meta name="author" content="Uriel Henrique">
+    <title>Agrinho 2026 | CEP - Colégio Estadual do Paraná</title>
+    <meta name="description" content="Agrinho 2026 no CEP: Agro forte, futuro sustentável. Projeto educacional sobre equilíbrio entre produção agrícola e preservação ambiental.">
+    <meta name="keywords" content="Agrinho 2026, CEP, Colégio Estadual do Paraná, agro sustentável, educação no campo">
+    <meta name="author" content="Uriel Henrique - CEP">
     <meta name="theme-color" content="#0F172A">
 
-    <!-- Open Graph / Redes Sociais -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Agrinho 2026 | Agro Forte, Futuro Sustentável">
-    <meta property="og:description" content="Equilíbrio entre produção e meio ambiente. Conheça o projeto educacional que planta ideias para o futuro.">
+    <meta property="og:title" content="Agrinho 2026 | CEP - Colégio Estadual do Paraná">
+    <meta property="og:description" content="Projeto educacional Agrinho 2026 desenvolvido no Colégio Estadual do Paraná">
     <meta property="og:locale" content="pt_BR">
 
-    <!-- Pré-carregamento de fontes (simulado com system fonts para performance) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <!-- Folha de Estilo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Link para pular navegação (Acessibilidade WCAG 2.4.1) -->
     <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-    <!-- Cabeçalho -->
+    <!-- Header -->
     <header id="main-header" class="site-header">
         <div class="container header-container">
-            <a href="#hero" class="logo" aria-label="Agrinho 2026 - Voltar ao início">
-                <span class="logo-text">AGRINHO</span>
-                <span class="logo-year">2026</span>
-            </a>
+            <div class="logo-container">
+                <div class="cep-badge">CEP</div>
+                <a href="#hero" class="logo" aria-label="Agrinho 2026 CEP - Voltar ao início">
+                    <span class="logo-text">AGRINHO</span>
+                    <span class="logo-year">2026</span>
+                </a>
+            </div>
             
-            <button 
-                class="mobile-menu-btn" 
-                aria-expanded="false" 
-                aria-controls="main-nav" 
-                aria-label="Abrir menu de navegação principal"
-            >
+            <button class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
                 <span class="hamburger" aria-hidden="true"></span>
             </button>
 
             <nav id="main-nav" class="nav-menu" aria-label="Navegação principal">
                 <ul>
                     <li><a href="#hero">Início</a></li>
-                    <li><a href="#sobre">O Agrinho</a></li>
-                    <li><a href="#tema">Tema 2026</a></li>
-                    <li><a href="#equilibrio">Sustentabilidade</a></li>
-                    <li><a href="#tecnologia">Tecnologia</a></li>
-                    <li><a href="#faq">Dúvidas</a></li>
+                    <li><a href="#sobre">O Projeto</a></li>
+                    <li><a href="#tema">Tema</a></li>
+                    <li><a href="#ilustracoes">Ilustrações</a></li>
+                    <li><a href="#referencias">Referências</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,84 +52,149 @@
 
     <main id="main-content">
         
-        <!-- Seção Hero -->
+        <!-- Hero Section -->
         <section id="hero" class="hero-section" aria-labelledby="hero-title">
             <div class="hero-bg-shapes" aria-hidden="true">
-                <svg class="shape-svg shape-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#0F172A" d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,79.6,-46.3C87.4,-33.5,90.1,-18,88.5,-3.3C86.9,11.4,81,25.3,72.1,37.1C63.2,48.9,51.3,58.6,38.3,65.3C25.3,72,11.2,75.7,-1.8,78.1C-14.8,80.5,-28.6,81.6,-40.5,75.8C-52.4,70,-62.4,57.3,-70.1,43.5C-77.8,29.7,-83.2,14.8,-82.1,0.7C-81,-13.4,-73.4,-26.8,-63.1,-37.5C-52.8,-48.2,-39.8,-56.2,-26.6,-64.1C-13.4,-72,-0.2,-79.8,13.5,-80.5C27.2,-81.2,41.4,-74.8,44.7,-76.4Z" transform="translate(100 100)" />
+                <!-- Ilustração minimalista: Campo com tecnologia -->
+                <svg class="hero-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Sol -->
+                    <circle cx="350" cy="50" r="30" fill="#38BDF8" opacity="0.6">
+                        <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <!-- Montanhas/Campo -->
+                    <path d="M0 200 Q100 150 200 180 T400 160 L400 300 L0 300 Z" fill="#0F172A" opacity="0.3"/>
+                    <path d="M0 220 Q150 180 250 200 T400 190 L400 300 L0 300 Z" fill="#1E293B" opacity="0.4"/>
+                    
+                    <!-- Plantações (linhas minimalistas) -->
+                    <g stroke="#38BDF8" stroke-width="2" fill="none" opacity="0.5">
+                        <line x1="50" y1="250" x2="350" y2="250"/>
+                        <line x1="50" y1="265" x2="350" y2="265"/>
+                        <line x1="50" y1="280" x2="350" y2="280"/>
+                    </g>
+                    
+                    <!-- Trator simplificado -->
+                    <g transform="translate(150, 190)" opacity="0.7">
+                        <rect x="0" y="20" width="40" height="15" fill="#38BDF8" rx="3"/>
+                        <circle cx="10" cy="38" r="8" fill="#7DD3FC"/>
+                        <circle cx="40" cy="38" r="10" fill="#7DD3FC"/>
+                        <rect x="35" y="10" width="8" height="12" fill="#38BDF8" rx="2"/>
+                    </g>
+                    
+                    <!-- Drone/tecnologia -->
+                    <g transform="translate(280, 100)" opacity="0.6">
+                        <ellipse cx="20" cy="10" rx="15" ry="5" fill="#38BDF8"/>
+                        <line x1="5" y1="10" x2="5" y2="20" stroke="#38BDF8" stroke-width="1"/>
+                        <line x1="35" y1="10" x2="35" y2="20" stroke="#38BDF8" stroke-width="1"/>
+                        <circle cx="20" cy="25" r="3" fill="#7DD3FC"/>
+                    </g>
                 </svg>
-                <svg class="shape-svg shape-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#38BDF8" fill-opacity="0.15" d="M38.9,-65.5C50.5,-58.6,60.6,-49.3,68.3,-38.3C76,-27.3,81.3,-14.6,79.8,-2.4C78.3,9.8,70,21.5,61.1,31.7C52.2,41.9,42.7,50.6,31.8,57.1C20.9,63.6,8.6,67.9,-2.8,70.1C-14.2,72.3,-25.6,72.4,-35.8,66.8C-46,61.2,-55,49.9,-62.1,37.6C-69.2,25.3,-74.4,12,-73.6,-0.8C-72.8,-13.6,-66,-25.9,-57.1,-36.3C-48.2,-46.7,-37.2,-55.2,-25.6,-62.1C-14,-69,-1.8,-74.3,9.8,-73.5C21.4,-72.7,32.8,-65.8,38.9,-65.5Z" transform="translate(100 100)" />
-                </svg>
-                <div class="grid-overlay"></div>
             </div>
             
             <div class="container hero-content">
-                <span class="hero-tag fade-in-up">Projeto Educacional 2026</span>
-                <h1 id="hero-title" class="hero-main-title fade-in-up delay-1">AGRINHO 2026</h1>
-                <h2 class="hero-subtitle fade-in-up delay-2">Agro forte, futuro sustentável</h2>
-                <p class="hero-description fade-in-up delay-3">
-                    Equilíbrio entre produção e meio ambiente. Conectando conhecimento, inovação e respeito à natureza para construir o amanhã que queremos viver.
+                <div class="institution-badge fade-in-up">
+                    <span class="badge-icon">🏫</span>
+                    <span>Colégio Estadual do Paraná - CEP</span>
+                </div>
+                <span class="hero-tag fade-in-up delay-1">Projeto Educacional 2026</span>
+                <h1 id="hero-title" class="hero-main-title fade-in-up delay-2">AGRINHO 2026</h1>
+                <h2 class="hero-subtitle fade-in-up delay-3">Agro forte, futuro sustentável</h2>
+                <p class="hero-description fade-in-up delay-4">
+                    Equilíbrio entre produção e meio ambiente. Projeto desenvolvido pelos estudantes do CEP 
+                    promovendo educação, sustentabilidade e inovação no campo.
                 </p>
-                <div class="hero-buttons fade-in-up delay-4">
-                    <a href="#sobre" class="btn btn-primary">CONHEÇA O AGRINHO</a>
-                    <a href="#tema" class="btn btn-outline">EXPLORAR O TEMA</a>
+                <div class="hero-buttons fade-in-up delay-5">
+                    <a href="#sobre" class="btn btn-primary">CONHEÇA O PROJETO</a>
+                    <a href="#ilustracoes" class="btn btn-outline">VER ILUSTRAÇÕES</a>
                 </div>
             </div>
             
-            <a href="#sobre" class="scroll-indicator" aria-label="Rolar para a próxima seção">
+            <a href="#sobre" class="scroll-indicator" aria-label="Rolar para próxima seção">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M12 5v14M19 12l-7 7-7-7"/>
                 </svg>
             </a>
         </section>
 
-        <!-- Seção Sobre -->
+        <!-- Sobre o Projeto -->
         <section id="sobre" class="section about-section" aria-labelledby="about-title">
             <div class="container split-layout">
                 <div class="split-text">
-                    <span class="section-tag">Educação e Cidadania</span>
+                    <span class="section-tag">Sobre o Agrinho no CEP</span>
                     <h2 id="about-title">Educação que planta ideias para o futuro</h2>
-                    <p>O Agrinho é um programa educacional dedicado à formação de estudantes, promovendo a reflexão crítica sobre temas essenciais à nossa sociedade. Através de materiais didáticos e ações nas escolas, incentivamos o debate sobre cidadania, sustentabilidade e a relação entre campo e cidade.</p>
-                    <p>Nosso objetivo não é apenas informar, mas transformar. Queremos que as novas gerações compreendam que o futuro da alimentação e da preservação ambiental depende das escolhas conscientes que fazemos hoje.</p>
-                    <ul class="feature-list">
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--azul-principal)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Formação de cidadãos conscientes</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--azul-principal)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Integração entre saberes urbanos e rurais</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--azul-principal)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Foco em desenvolvimento sustentável</span>
-                        </li>
-                    </ul>
+                    <p>O <strong>Agrinho</strong> é um programa educacional desenvolvido no <strong>Colégio Estadual do Paraná (CEP)</strong> que promove a formação cidadã dos estudantes através de discussões sobre sustentabilidade, agronegócio e preservação ambiental.</p>
+                    <p>Através deste projeto, os alunos do CEP desenvolvem consciência crítica sobre a importância do equilíbrio entre produção agrícola e conservação do meio ambiente, preparando-se para serem cidadãos responsáveis e conscientes.</p>
+                    
+                    <div class="cep-info-box">
+                        <h3>🏫 Colégio Estadual do Paraná</h3>
+                        <p>Instituição de ensino público comprometida com a formação integral dos estudantes, promovendo educação de qualidade e valores cidadães.</p>
+                        <ul class="feature-list">
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--azul-principal)" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Educação pública de qualidade</span>
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--azul-principal)" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Formação cidadã e consciente</span>
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--azul-principal)" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Compromisso com sustentabilidade</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                
                 <div class="split-visual" aria-hidden="true">
-                    <div class="abstract-illustration">
-                        <div class="circle c1"></div>
-                        <div class="circle c2"></div>
-                        <div class="circle c3"></div>
-                        <svg viewBox="0 0 100 100" class="icon-overlay">
-                            <path d="M50 10 L90 30 L90 70 L50 90 L10 70 L10 30 Z" fill="none" stroke="var(--azul-principal)" stroke-width="2"/>
-                            <circle cx="50" cy="50" r="15" fill="var(--azul-claro)"/>
-                            <path d="M50 35 L50 10 M65 65 L85 80 M35 65 L15 80" stroke="var(--branco)" stroke-width="2"/>
+                    <!-- Ilustração: Educação + Campo -->
+                    <div class="illustration-card">
+                        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Livro aberto -->
+                            <g transform="translate(50, 100)">
+                                <path d="M0 0 L100 20 L100 120 L0 100 Z" fill="#38BDF8" opacity="0.3"/>
+                                <path d="M100 20 L200 0 L200 100 L100 120 Z" fill="#7DD3FC" opacity="0.3"/>
+                                <line x1="100" y1="20" x2="100" y2="120" stroke="#38BDF8" stroke-width="2"/>
+                                <!-- Linhas do livro -->
+                                <line x1="20" y1="40" x2="80" y2="50" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+                                <line x1="20" y1="60" x2="80" y2="70" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+                                <line x1="120" y1="40" x2="180" y2="50" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+                            </g>
+                            
+                            <!-- Planta crescendo do livro -->
+                            <g transform="translate(140, 80)">
+                                <path d="M10 20 Q5 10 10 0 Q15 10 10 20" fill="#38BDF8" opacity="0.8"/>
+                                <circle cx="10" cy="-5" r="5" fill="#7DD3FC"/>
+                            </g>
+                            
+                            <!-- Ícones circulares -->
+                            <circle cx="80" cy="220" r="25" fill="#0F172A" stroke="#38BDF8" stroke-width="2"/>
+                            <text x="80" y="227" text-anchor="middle" fill="#38BDF8" font-size="20">📚</text>
+                            
+                            <circle cx="150" cy="210" r="25" fill="#0F172A" stroke="#38BDF8" stroke-width="2"/>
+                            <text x="150" y="217" text-anchor="middle" fill="#38BDF8" font-size="20"></text>
+                            
+                            <circle cx="220" cy="220" r="25" fill="#0F172A" stroke="#38BDF8" stroke-width="2"/>
+                            <text x="220" y="227" text-anchor="middle" fill="#38BDF8" font-size="20">🎓</text>
                         </svg>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Tema -->
+        <!-- Tema 2026 -->
         <section id="tema" class="section theme-section bg-darker" aria-labelledby="theme-title">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-tag">Tema Oficial</span>
+                    <span class="section-tag">Tema Oficial 2026</span>
                     <h2 id="theme-title">Agro forte. Futuro sustentável.</h2>
                     <blockquote class="theme-quote">
-                        “Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente”
+                        "Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente"
                     </blockquote>
                 </div>
                 
@@ -146,229 +202,257 @@
                     <article class="card">
                         <div class="card-icon" aria-hidden="true">🌱</div>
                         <h3>Produção responsável</h3>
-                        <p>Garantir a segurança alimentar global com práticas que respeitam os limites e a regeneração dos ecossistemas naturais.</p>
+                        <p>Garantir segurança alimentar com práticas que respeitam os limites dos ecossistemas.</p>
                     </article>
                     <article class="card">
                         <div class="card-icon" aria-hidden="true">💧</div>
                         <h3>Preservação da água</h3>
-                        <p>O uso consciente e a proteção dos recursos hídricos como base fundamental para a vida e para a agricultura.</p>
+                        <p>Uso consciente e proteção dos recursos hídricos como base para vida e agricultura.</p>
                     </article>
                     <article class="card">
                         <div class="card-icon" aria-hidden="true">🌎</div>
                         <h3>Equilíbrio ambiental</h3>
-                        <p>A harmonia necessária entre a expansão produtiva e a conservação da biodiversidade e das matas nativas.</p>
+                        <p>Harmonia entre expansão produtiva e conservação da biodiversidade.</p>
                     </article>
                     <article class="card">
                         <div class="card-icon" aria-hidden="true">🤖</div>
                         <h3>Tecnologia e inovação</h3>
-                        <p>Ferramentas digitais, biotecnologia e dados aplicados para otimizar recursos e reduzir impactos ambientais.</p>
+                        <p>Ferramentas digitais aplicadas para otimizar recursos e reduzir impactos.</p>
                     </article>
                     <article class="card">
                         <div class="card-icon" aria-hidden="true">📚</div>
                         <h3>Educação</h3>
-                        <p>O conhecimento como alicerce para formar cidadãos conscientes e profissionais preparados para os desafios do século.</p>
+                        <p>Conhecimento para formar cidadãos conscientes e profissionais preparados.</p>
                     </article>
                     <article class="card">
                         <div class="card-icon" aria-hidden="true">🚜</div>
                         <h3>Campo e desenvolvimento</h3>
-                        <p>O fortalecimento das comunidades rurais como motor de progresso, geração de emprego e tecnologia para todo o país.</p>
+                        <p>Fortalecimento das comunidades rurais como motor de progresso.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Interativa: Equilíbrio -->
-        <section id="equilibrio" class="section equilibrium-section" aria-labelledby="equilibrium-title">
-            <div class="container text-center">
-                <span class="section-tag">Simulação Interativa</span>
-                <h2 id="equilibrium-title">O Desafio do Equilíbrio</h2>
-                <p class="mb-2">Arraste o controle abaixo para entender a dinâmica entre produção e preservação.</p>
-                
-                <div class="equilibrium-container" role="region" aria-label="Simulador de equilíbrio entre produção e meio ambiente">
-                    <div class="equilibrium-labels">
-                        <span id="label-producao">Foco na Produção</span>
-                        <span id="label-ambiente">Foco no Meio Ambiente</span>
-                    </div>
-                    
-                    <input 
-                        type="range" 
-                        id="balance-slider" 
-                        min="0" 
-                        max="100" 
-                        value="50" 
-                        class="custom-range"
-                        aria-valuemin="0" 
-                        aria-valuemax="100" 
-                        aria-valuenow="50" 
-                        aria-label="Controle de equilíbrio entre produção e meio ambiente"
-                    >
-                    
-                    <div class="equilibrium-display" id="equilibrium-text" aria-live="polite">
-                        <h3>Equilíbrio Ideal</h3>
-                        <p>Quando produção e preservação caminham juntas, garantimos alimentos hoje sem comprometer os recursos de amanhã. Esta é a base do desenvolvimento sustentável.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Tecnologia -->
-        <section id="tecnologia" class="section tech-section bg-darker" aria-labelledby="tech-title">
+        <!-- Ilustrações Minimalistas -->
+        <section id="ilustracoes" class="section illustrations-section" aria-labelledby="illustrations-title">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-tag">Inovação no Campo</span>
-                    <h2 id="tech-title">Tecnologia a Serviço da Natureza</h2>
-                    <p class="section-subtitle">A modernização rural não é sobre substituir a natureza, mas sobre entendê-la melhor através de dados e inovação.</p>
+                    <span class="section-tag">Galeria Visual</span>
+                    <h2 id="illustrations-title">Ilustrações do Projeto</h2>
+                    <p class="section-subtitle">Representações minimalistas dos conceitos do Agrinho 2026</p>
                 </div>
 
-                <div class="cards-grid compact-grid">
-                    <article class="card compact">
-                        <div class="card-icon-small" aria-hidden="true">📡</div>
-                        <h3>Agricultura de precisão</h3>
-                        <p>Uso de dados e geolocalização para aplicar insumos apenas onde e quando necessário, reduzindo desperdícios.</p>
-                    </article>
-                    <article class="card compact">
-                        <div class="card-icon-small" aria-hidden="true">💧</div>
-                        <h3>Irrigação inteligente</h3>
-                        <p>Sistemas que monitoram a umidade do solo em tempo real, garantindo o uso consciente e econômico da água.</p>
-                    </article>
-                    <article class="card compact">
-                        <div class="card-icon-small" aria-hidden="true">🛰️</div>
-                        <h3>Sensoriamento remoto</h3>
-                        <p>Monitoramento contínuo das condições do solo e das plantações via satélites e drones agrícolas.</p>
-                    </article>
-                    <article class="card compact">
-                        <div class="card-icon-small" aria-hidden="true">⚙️</div>
-                        <h3>Automação de processos</h3>
-                        <p>Tecnologias capazes de otimizar processos operacionais, aumentando a segurança e a eficiência logística.</p>
-                    </article>
-                    <article class="card compact">
-                        <div class="card-icon-small" aria-hidden="true">🤖</div>
-                        <h3>Robótica agrícola</h3>
-                        <p>Inovação aplicada aos desafios do campo, desde a colheita seletiva até o controle mecânico de pragas.</p>
-                    </article>
-                    <article class="card compact">
-                        <div class="card-icon-small" aria-hidden="true">🎓</div>
-                        <h3>Educação Digital</h3>
-                        <p>O conhecimento técnico e digital como ferramenta essencial para incluir o produtor e transformar realidades.</p>
-                    </article>
+                <div class="illustrations-grid">
+                    <!-- Ilustração 1: Sustentabilidade -->
+                    <div class="illustration-item fade-in-up">
+                        <div class="illustration-box">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.3"/>
+                                <!-- Árvore -->
+                                <rect x="95" y="120" width="10" height="40" fill="#7DD3FC"/>
+                                <circle cx="100" cy="100" r="30" fill="#38BDF8" opacity="0.6"/>
+                                <circle cx="85" cy="110" r="20" fill="#7DD3FC" opacity="0.5"/>
+                                <circle cx="115" cy="110" r="20" fill="#7DD3FC" opacity="0.5"/>
+                                <!-- Sol -->
+                                <circle cx="150" cy="50" r="15" fill="#FCD34D" opacity="0.8"/>
+                            </svg>
+                        </div>
+                        <h3>Sustentabilidade</h3>
+                        <p>Equilíbrio entre natureza e produção</p>
+                    </div>
+
+                    <!-- Ilustração 2: Tecnologia no Campo -->
+                    <div class="illustration-item fade-in-up delay-1">
+                        <div class="illustration-box">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Campo -->
+                                <rect x="20" y="140" width="160" height="40" fill="#0F172A" opacity="0.5" rx="5"/>
+                                <line x1="30" y1="155" x2="170" y2="155" stroke="#38BDF8" stroke-width="1" opacity="0.5"/>
+                                <line x1="30" y1="165" x2="170" y2="165" stroke="#38BDF8" stroke-width="1" opacity="0.5"/>
+                                <!-- Drone -->
+                                <ellipse cx="100" cy="80" rx="30" ry="8" fill="#38BDF8" opacity="0.7"/>
+                                <line x1="70" y1="80" x2="70" y2="95" stroke="#38BDF8" stroke-width="2"/>
+                                <line x1="130" y1="80" x2="130" y2="95" stroke="#38BDF8" stroke-width="2"/>
+                                <circle cx="100" cy="100" r="5" fill="#7DD3FC"/>
+                                <!-- Sinal -->
+                                <path d="M100 60 Q90 50 100 40 Q110 50 100 60" fill="none" stroke="#38BDF8" stroke-width="1" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <h3>Tecnologia</h3>
+                        <p>Inovação a serviço do campo</p>
+                    </div>
+
+                    <!-- Ilustração 3: Educação -->
+                    <div class="illustration-item fade-in-up delay-2">
+                        <div class="illustration-box">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Chapéu de formatura -->
+                                <polygon points="100,60 160,90 100,120 40,90" fill="#38BDF8" opacity="0.8"/>
+                                <rect x="95" y="60" width="10" height="30" fill="#7DD3FC"/>
+                                <circle cx="100" cy="55" r="5" fill="#FCD34D"/>
+                                <!-- Livro -->
+                                <rect x="60" y="140" width="80" height="40" fill="#0F172A" stroke="#38BDF8" stroke-width="2" rx="3"/>
+                                <line x1="100" y1="140" x2="100" y2="180" stroke="#38BDF8" stroke-width="2"/>
+                                <line x1="70" y1="155" x2="90" y2="155" stroke="#FFFFFF" stroke-width="2" opacity="0.5"/>
+                                <line x1="70" y1="165" x2="90" y2="165" stroke="#FFFFFF" stroke-width="2" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h3>Educação</h3>
+                        <p>Conhecimento que transforma</p>
+                    </div>
+
+                    <!-- Ilustração 4: Campo e Cidade -->
+                    <div class="illustration-item fade-in-up delay-3">
+                        <div class="illustration-box">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Campo (esquerda) -->
+                                <rect x="20" y="100" width="60" height="80" fill="#0F172A" opacity="0.4" rx="3"/>
+                                <path d="M30 120 Q40 110 50 120" fill="none" stroke="#38BDF8" stroke-width="2"/>
+                                <circle cx="50" cy="90" r="10" fill="#7DD3FC" opacity="0.6"/>
+                                
+                                <!-- Cidade (direita) -->
+                                <rect x="120" y="80" width="30" height="100" fill="#38BDF8" opacity="0.6" rx="2"/>
+                                <rect x="155" y="100" width="25" height="80" fill="#7DD3FC" opacity="0.5" rx="2"/>
+                                
+                                <!-- Conexão -->
+                                <line x1="80" y1="140" x2="120" y2="140" stroke="#38BDF8" stroke-width="3" stroke-dasharray="5,3"/>
+                                <circle cx="100" cy="140" r="5" fill="#FCD34D"/>
+                            </svg>
+                        </div>
+                        <h3>Campo & Cidade</h3>
+                        <p>Conexão e interdependência</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Campo + Cidade -->
-        <section id="campo-cidade" class="section connection-section" aria-labelledby="connection-title">
+        <!-- Referências -->
+        <section id="referencias" class="section references-section bg-darker" aria-labelledby="references-title">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-tag">Conexão Vital</span>
-                    <h2 id="connection-title">Campo e Cidade: Um Único Sistema</h2>
+                    <span class="section-tag">Fontes de Pesquisa</span>
+                    <h2 id="references-title">Referências Bibliográficas</h2>
+                    <p class="section-subtitle">Fontes consultadas para desenvolvimento deste projeto</p>
                 </div>
-                <div class="connection-diagram">
-                    <div class="node field-node">
-                        <h3>CAMPO</h3>
-                        <ul>
-                            <li>Produção de alimentos</li>
-                            <li>Matérias-primas renováveis</li>
-                            <li>Preservação de nascentes</li>
-                            <li>Tradição e cultura rural</li>
-                        </ul>
-                    </div>
-                    <div class="connection-lines" aria-hidden="true">
-                        <div class="line"></div>
-                        <div class="icon-exchange">⇄</div>
-                        <div class="line"></div>
-                    </div>
-                    <div class="node city-node">
-                        <h3>CIDADE</h3>
-                        <ul>
-                            <li>Tecnologia e inovação</li>
-                            <li>Escolas e universidades</li>
-                            <li>Mercado consumidor</li>
-                            <li>Políticas públicas</li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="text-center mt-2 connection-text">O desenvolvimento sustentável só é possível quando reconhecemos que a saúde do campo reflete diretamente na qualidade de vida e na economia das cidades.</p>
-            </div>
-        </section>
 
-        <!-- Seção FAQ (Adicional para robustez) -->
-        <section id="faq" class="section faq-section bg-darker" aria-labelledby="faq-title">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-tag">Tire suas dúvidas</span>
-                    <h2 id="faq-title">Perguntas Frequentes</h2>
+                <div class="references-container">
+                    <div class="reference-item fade-in-up">
+                        <div class="reference-icon"></div>
+                        <div class="reference-content">
+                            <h3>SEBRAE - Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</h3>
+                            <p class="reference-title">Agronegócio e Sustentabilidade</p>
+                            <p class="reference-description">Materiais sobre práticas sustentáveis no agronegócio brasileiro e desenvolvimento rural.</p>
+                            <a href="https://www.sebrae.com.br" target="_blank" rel="noopener noreferrer" class="reference-link">
+                                Visitar site →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="reference-item fade-in-up delay-1">
+                        <div class="reference-icon">🌾</div>
+                        <div class="reference-content">
+                            <h3>EMBRAPA - Empresa Brasileira de Pesquisa Agropecuária</h3>
+                            <p class="reference-title">Tecnologia e Inovação no Campo</p>
+                            <p class="reference-description">Pesquisas sobre agricultura de precisão, sustentabilidade e tecnologias agrícolas.</p>
+                            <a href="https://www.embrapa.br" target="_blank" rel="noopener noreferrer" class="reference-link">
+                                Visitar site →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="reference-item fade-in-up delay-2">
+                        <div class="reference-icon"></div>
+                        <div class="reference-content">
+                            <h3>Programa Agrinho</h3>
+                            <p class="reference-title">Material Didático Oficial</p>
+                            <p class="reference-description">Cartilhas e materiais educativos do programa Agrinho sobre sustentabilidade e cidadania.</p>
+                            <a href="https://www.agrinho.com.br" target="_blank" rel="noopener noreferrer" class="reference-link">
+                                Visitar site →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="reference-item fade-in-up delay-3">
+                        <div class="reference-icon">🌍</div>
+                        <div class="reference-content">
+                            <h3>FAO - Food and Agriculture Organization</h3>
+                            <p class="reference-title">Agricultura Sustentável e Segurança Alimentar</p>
+                            <p class="reference-description">Diretrizes internacionais sobre produção agrícola sustentável e preservação ambiental.</p>
+                            <a href="https://www.fao.org" target="_blank" rel="noopener noreferrer" class="reference-link">
+                                Visitar site →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="reference-item fade-in-up delay-4">
+                        <div class="reference-icon">💧</div>
+                        <div class="reference-content">
+                            <h3>ANA - Agência Nacional de Águas</h3>
+                            <p class="reference-title">Uso da Água na Agricultura</p>
+                            <p class="reference-description">Informações sobre gestão hídrica e uso sustentável da água na agricultura.</p>
+                            <a href="https://www.ana.gov.br" target="_blank" rel="noopener noreferrer" class="reference-link">
+                                Visitar site →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="reference-item fade-in-up delay-5">
+                        <div class="reference-icon">🏫</div>
+                        <div class="reference-content">
+                            <h3>Colégio Estadual do Paraná - CEP</h3>
+                            <p class="reference-title">Projeto Pedagógico Institucional</p>
+                            <p class="reference-description">Diretrizes educacionais e projetos desenvolvidos no CEP relacionados à sustentabilidade.</p>
+                            <span class="reference-note">Instituição de ensino onde o projeto foi desenvolvido</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="faq-container">
-                    <details class="faq-item">
-                        <summary>
-                            <span>O que é o Agrinho?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </summary>
-                        <div class="faq-content">
-                            <p>O Agrinho é um programa educacional que leva para as salas de aula discussões sobre sustentabilidade, cidadania e a importância do agronegócio para o desenvolvimento do país, sempre com foco na preservação ambiental.</p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>
-                            <span>Como a tecnologia ajuda na sustentabilidade?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </summary>
-                        <div class="faq-content">
-                            <p>A tecnologia permite o uso de "Agricultura de Precisão", onde insumos como água e fertilizantes são aplicados apenas na quantidade exata e no local certo, evitando desperdícios e contaminação do solo.</p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary>
-                            <span>Por que o equilíbrio entre campo e cidade é importante?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </summary>
-                        <div class="faq-content">
-                            <p>Porque são interdependentes. A cidade fornece tecnologia, serviços e mercado, enquanto o campo fornece alimentos, matérias-primas e serviços ecossistêmicos, como a regulação do clima e da água.</p>
-                        </div>
-                    </details>
+
+                <div class="references-note fade-in-up">
+                    <h3>📌 Nota Metodológica</h3>
+                    <p>Este projeto foi desenvolvido como parte das atividades educacionais do <strong>Colégio Estadual do Paraná (CEP)</strong>, utilizando fontes oficiais e materiais didáticos do programa Agrinho. As ilustrações são criações originais em SVG desenvolvidas para representar visualmente os conceitos de sustentabilidade, tecnologia e educação no campo.</p>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Rodapé -->
+    <!-- Footer -->
     <footer id="footer" class="site-footer">
         <div class="container footer-content">
             <div class="footer-brand">
+                <div class="footer-cep-badge">CEP</div>
                 <span class="logo-text">AGRINHO</span> <span class="logo-year">2026</span>
+                <p class="footer-school">Colégio Estadual do Paraná</p>
                 <p class="footer-theme">Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</p>
-                <p class="footer-disclaimer">Projeto educacional desenvolvido para fins de aprendizado e conscientização.</p>
+                <p class="footer-disclaimer">Projeto educacional desenvolvido por estudantes do CEP para fins de aprendizado e conscientização sobre sustentabilidade no agronegócio.</p>
             </div>
             <div class="footer-links">
                 <h4>Navegação</h4>
                 <ul>
                     <li><a href="#hero">Início</a></li>
-                    <li><a href="#sobre">O Agrinho</a></li>
+                    <li><a href="#sobre">O Projeto</a></li>
                     <li><a href="#tema">Tema 2026</a></li>
-                    <li><a href="#tecnologia">Tecnologia</a></li>
+                    <li><a href="#ilustracoes">Ilustrações</a></li>
+                    <li><a href="#referencias">Referências</a></li>
                 </ul>
             </div>
             <div class="footer-credits">
-                <p>Design e Desenvolvimento</p>
+                <p>Desenvolvimento</p>
                 <p class="author-credit">By Uriel Henrique</p>
+                <p class="school-credit">Colégio Estadual do Paraná - CEP</p>
+                <p class="year-credit">2026</p>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 Agrinho. Todos os direitos reservados. Projeto de caráter educacional.</p>
+                <p>&copy; 2026 Agrinho - CEP. Todos os direitos reservados. Projeto de caráter educacional.</p>
+                <p class="footer-credits-text">Fontes: SEBRAE, EMBRAPA, FAO, ANA e material oficial Agrinho</p>
             </div>
         </div>
     </footer>
 
-    <!-- Painel de Acessibilidade -->
-    <button 
-        id="accessibility-toggle" 
-        class="fab accessibility-fab" 
-        aria-label="Abrir painel de acessibilidade" 
-        aria-expanded="false" 
-        aria-controls="accessibility-panel"
-    >
+    <!-- Acessibilidade -->
+    <button id="accessibility-toggle" class="fab accessibility-fab" aria-label="Abrir painel de acessibilidade" aria-expanded="false" aria-controls="accessibility-panel">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="4.5" r="2.5"/>
             <path d="M12 7v5"/>
@@ -383,32 +467,32 @@
     <div id="accessibility-panel" class="accessibility-panel" aria-hidden="true" role="dialog" aria-labelledby="panel-title">
         <div class="panel-header">
             <h3 id="panel-title">Acessibilidade</h3>
-            <button id="close-panel" aria-label="Fechar painel de acessibilidade">&times;</button>
+            <button id="close-panel" aria-label="Fechar painel">&times;</button>
         </div>
         <div class="panel-controls">
-            <button class="panel-btn" id="btn-increase-font" aria-label="Aumentar tamanho da fonte">
+            <button class="panel-btn" id="btn-increase-font" aria-label="Aumentar texto">
                 <span class="btn-icon">A+</span> Aumentar texto
             </button>
-            <button class="panel-btn" id="btn-decrease-font" aria-label="Diminuir tamanho da fonte">
+            <button class="panel-btn" id="btn-decrease-font" aria-label="Diminuir texto">
                 <span class="btn-icon">A-</span> Diminuir texto
             </button>
-            <button class="panel-btn" id="btn-contrast" aria-label="Ativar ou desativar alto contraste">
+            <button class="panel-btn" id="btn-contrast" aria-label="Alto contraste">
                 <span class="btn-icon">◐</span> Alto contraste
             </button>
-            <button class="panel-btn" id="btn-spacing" aria-label="Aumentar espaçamento entre linhas e letras">
+            <button class="panel-btn" id="btn-spacing" aria-label="Espaçamento">
                 <span class="btn-icon">↔</span> Espaçamento
             </button>
-            <button class="panel-btn" id="btn-reduce-motion" aria-label="Reduzir animações e movimentos">
+            <button class="panel-btn" id="btn-reduce-motion" aria-label="Reduzir animações">
                 <span class="btn-icon">⏱</span> Reduzir animações
             </button>
-            <button class="panel-btn btn-reset" id="btn-reset" aria-label="Restaurar configurações padrão de acessibilidade">
-                <span class="btn-icon">🔄</span> Restaurar padrão
+            <button class="panel-btn btn-reset" id="btn-reset" aria-label="Restaurar padrão">
+                <span class="btn-icon">🔄</span> Restaurar
             </button>
         </div>
     </div>
 
-    <!-- Botão Voltar ao Topo -->
-    <button id="back-to-top" class="fab back-to-top" aria-label="Voltar ao topo da página" hidden>
+    <!-- Voltar ao topo -->
+    <button id="back-to-top" class="fab back-to-top" aria-label="Voltar ao topo" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M18 15l-6-6-6 6"/>
         </svg>
