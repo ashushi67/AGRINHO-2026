@@ -29,13 +29,11 @@ O projeto possui um **Painel de Acessibilidade** funcional (canto inferior direi
 - **Navegação por Teclado**: Foco visível (`:focus-visible`), skip link para pular navegação e gerenciamento de foco em modais/painéis.
 
 ## Estrutura de Arquivos
-text
-agrinho-2026/
-│
-├── index.html      # Estrutura semântica e conteúdo
-├── style.css       # Estilos, variáveis, animações e responsividade
-├── script.js       # Lógica de interatividade, acessibilidade e observers
-└── README.md       # Documentação do projeto
+
+--index.html      # Estrutura semântica e conteúdo
+--style.css       # Estilos, variáveis, animações e responsividade
+--script.js       # Lógica de interatividade, acessibilidade e observers
+--README.md       # Documentação do projeto
 
 
 ## Como Executar
